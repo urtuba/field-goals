@@ -1,6 +1,6 @@
-import Game from "./models/game"
-import Team from "./models/team"
-import Quarter from "./models/quarter"
+import Game from "./models/game.js"
+import Team from "./models/team.js"
+import Quarter from "./models/quarter.js"
 
 class GameManager {
     constructor(t1Name, t2Name) {
@@ -18,6 +18,13 @@ class GameManager {
         players.forEach(player => {
             this.#addPlayer(player.teamId, player.name, player.number, player.role)
         })
+    }
+
+    getTeams() {
+        return {
+            team1: this.game.team1,
+            team2: this.game.team2
+        }
     }
 
     triggerTime() {
@@ -75,3 +82,5 @@ class GameManager {
         return filteredShoots.filter(shoot => shoot.team == team)
     }
 }
+
+export default GameManager

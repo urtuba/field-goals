@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "node app.js"
   },
@@ -15,6 +16,7 @@
   "dependencies": {
     "express": "^4.17.2",
     "md5": "^2.3.0",
-    "sqlite3": "^4.2.0"
+    "sqlite3": "^4.2.0",
+    "uuid": "^8.3.2"
   }
 }
