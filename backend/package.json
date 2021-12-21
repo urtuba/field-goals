@@ -1,0 +1,20 @@
+{
+  "name": "field-goals",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "keywords": [
+    "basketball",
+    "stats"
+  ],
+  "author": "urtuba",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.2",
+    "md5": "^2.3.0",
+    "sqlite3": "^4.2.0"
+  }
+}
