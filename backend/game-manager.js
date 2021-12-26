@@ -1,5 +1,6 @@
 import Game from "./models/game.js"
 import Team from "./models/team.js"
+import Attempt from "./models/attempt.js"
 import Quarter from "./models/quarter.js"
 
 class GameManager {
@@ -14,9 +15,9 @@ class GameManager {
         team.addPlayer(name, number, role)
     }
 
-    addPlayers(players) {
+    addPlayers(teamId, players) {
         players.forEach(player => {
-            this.#addPlayer(player.teamId, player.name, player.number, player.role)
+            this.#addPlayer(teamId, player[0], player[1], player[2])
         })
     }
 
@@ -29,7 +30,7 @@ class GameManager {
 
     triggerTime() {
         // check if the game is not started
-        if(this.game.quarters == []) {
+        if(this.game.quarters.length == 0) {
             const q1 = new Quarter(new Date().getTime())
             this.game.quarters.push(q1)
             return false
@@ -54,29 +55,32 @@ class GameManager {
     }
 
     addAttempt(teamId, playerNo, x, y, weight, success, ft) {
-        const team = teamId == 1 ? this.game.team1 : this.game.team2
-        const player = team.players.find(player => player.number == playerNo)
+        const attempt = new Attempt(teamId, playerNo, x, y, weight, success, ft)
+        this.game.shoots.push(attempt)
 
-        this.game.shoots.push(new Attempt(team, player, x, y, weight, success, ft))
         return true
     }
 
     #quarterFilter(qtr, shoots) {
+        console.log(qtr, shoots)
         if(qtr == 0)
             return shoots
+        else if (this.game.quarters.length == qtr && this.game.quarters[qtr - 1].end == null)
+            return shoots.filter(shoot => shoot.time >= this.game.quarters[qtr - 1].start)
         else
             return shoots.filter(shoot => shoot.time >= this.game.quarters[qtr - 1].start && shoot.time <= this.game.quarters[qtr - 1].end)
     }
 
     #playersFilter(players, shoots) {
-        if (players == [])
+        if (players.length == 0)
             return shoots
         else
-            return shoots.filter(shoot => players.includes(shoot.player.number))
+            return shoots.filter(shoot => players.includes(shoot.player))
     }
 
     getAttempts(team = 1, qtr = 0, players = []) {
         const shoots = this.game.shoots
+
         const filteredShoots = this.#playersFilter(players, this.#quarterFilter(qtr, shoots))
 
         return filteredShoots.filter(shoot => shoot.team == team)
