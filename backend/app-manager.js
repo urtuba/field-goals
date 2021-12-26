@@ -14,7 +14,35 @@ class AppManager {
     }
 
     getGame(gameId) {
-        return this.games[gameId].getAttempts()
+        return this.games[gameId]
+    }
+
+    triggerTime(gameId) {
+        return this.games[gameId].triggerTime()
+    }
+
+    addPlayers(gameId, teamId, players) {
+        this.games[gameId].addPlayers(teamId, players)
+    }
+
+    addAttempt(gameId, teamId, playerNo, x, y, weight, success, ft) {
+        this.games[gameId].addAttempt(teamId, playerNo, x, y, weight, success, ft)
+    }
+
+    getQuarters(gameId) {
+        return this.games[gameId].getQuarters()
+    }
+
+    getAttempts(gameId, team, qtr, players) {
+        return this.games[gameId].getAttempts(team, qtr, players)
+    }
+
+    getTeams(gameId) {
+        return this.games[gameId].getTeams()
+    }
+
+    getScoreboard(gameId) {
+        return this.games[gameId].getScoreboard()
     }
 }
 

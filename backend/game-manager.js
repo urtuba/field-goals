@@ -72,6 +72,7 @@ class GameManager {
     }
 
     #playersFilter(players, shoots) {
+        console.log(players, shoots)
         if (players.length == 0)
             return shoots
         else
@@ -80,10 +81,32 @@ class GameManager {
 
     getAttempts(team = 1, qtr = 0, players = []) {
         const shoots = this.game.shoots
+        console.log(shoots)
 
         const filteredShoots = this.#playersFilter(players, this.#quarterFilter(qtr, shoots))
+        console.log(filteredShoots)
 
         return filteredShoots.filter(shoot => shoot.team == team)
+    }
+
+    getQuarters() {
+        return this.game.quarters
+    }
+
+    getScore(team = 1) {
+        let score = 0
+        this.game.shoots.forEach(shoot => {
+            if(shoot.team == team && shoot.success)
+                score += shoot.weight
+        })
+        return score
+    }
+
+    getScoreboard() {
+        return {
+            team1: this.getScore(1),
+            team2: this.getScore(2)
+        }
     }
 }
 
