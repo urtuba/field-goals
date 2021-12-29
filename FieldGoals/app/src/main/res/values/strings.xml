@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">FieldGoals</string>
+    <string name="enter_game_id">Enter Game ID</string>
+    <string name="join_game">JOIN GAME</string>
+    <string name="create_new_game">CREATE NEW GAME</string>
+    <string name="court_description">Court</string>
+    <string name="team_name1">Washington Wizards</string>
+    <string name="team_name2">Brooklyn Nets</string>
+    <string name="quarter">Qtr</string>
+    <string name="team1_score">26</string>
+    <string name="team2_score">15</string>
+
+    <string name="qall">All</string>
+    <string name="q1">1</string>
+    <string name="q2">2</string>
+    <string name="q3">3</string>
+    <string name="q4">4</string>
+
+    <string name="team1_player1_name">LeBron</string>
+    <string name="team1_player2_name">LeBron</string>
+    <string name="team1_player3_name">LeBron</string>
+    <string name="team1_player4_name">LeBron</string>
+    <string name="team1_player5_name">LeBron</string>
+    <string name="team1_player6_name">LeBron</string>
+    <string name="team2_player1_name">LeBron</string>
+    <string name="team2_player2_name">LeBron</string>
+    <string name="team2_player3_name">LeBron</string>
+    <string name="team2_player4_name">LeBron</string>
+    <string name="team2_player5_name">LeBron</string>
+    <string name="team2_player6_name">LeBron</string>
+
+    <string name="team1_player1_no">10</string>
+    <string name="team1_player2_no">10</string>
+    <string name="team1_player3_no">10</string>
+    <string name="team1_player4_no">10</string>
+    <string name="team1_player5_no">10</string>
+    <string name="team1_player6_no">10</string>
+    <string name="team2_player1_no">10</string>
+    <string name="team2_player2_no">10</string>
+    <string name="team2_player3_no">10</string>
+    <string name="team2_player4_no">10</string>
+    <string name="team2_player5_no">10</string>
+    <string name="team2_player6_no">10</string>
+
+    <string name="fgm">Field Goals Made</string>
+    <string name="fga">Field Goals Attempt</string>
+    <string name="fg_percent">Field Goals %</string>
+    <string name="ftm">Free Throws Made</string>
+    <string name="fta">Free Throws Attempt</string>
+    <string name="ft_percent">Free Throws %</string>
+    <string name="two_pt_percent">2 Point %</string>
+    <string name="three_pt_percent">3 Point %</string>
+
+    <string name="fgm_val">0</string>
+    <string name="fga_val">0</string>
+    <string name="fg_percent_val">0</string>
+    <string name="ftm_val">0</string>
+    <string name="fta_val">0</string>
+    <string name="ft_percent_val">0</string>
+    <string name="two_pt_percent_val">0</string>
+    <string name="three_pt_percent_val">0</string>
+</resources>

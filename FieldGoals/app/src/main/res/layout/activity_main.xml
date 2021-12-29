@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/court_image"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:background="@color/background_blue"
+        android:contentDescription="@string/court_description"
+        app:srcCompat="@drawable/halfcourt" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="1dp"
+        android:orientation="horizontal"
+        android:background="@color/background_blue">
+
+        <TextView
+            android:id="@+id/team1_name"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="3"
+            android:textSize="16dp"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:text="@string/team_name1"
+            android:background="@color/background_teamName"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"/>
+
+        <TextView
+            android:id="@+id/team1_score"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="2"
+            android:textSize="30dp"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:background="@color/background_teamName"
+            android:text="@string/team1_score"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"/>
+
+        <Spinner
+            android:id="@+id/quarter_spinner"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="2"
+            android:textSize="30dp"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:background="@color/background_teamName"
+            android:text="@string/qall"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"/>
+
+        <TextView
+            android:id="@+id/team2_name"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="3"
+            android:textSize="16dp"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:background="@color/background_teamName"
+            android:text="@string/team_name2"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"/>
+
+        <TextView
+            android:id="@+id/team2_score"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="2"
+            android:textSize="30dp"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:background="@color/background_teamName"
+            android:text="@string/team2_score"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:layout_marginTop="3dp"
+        android:background="@color/background_scores"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="@color/background_blue"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/checkbox_player1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_teamName"
+                android:text="@string/team1_player1_name" />
+
+            <CheckBox
+                android:id="@+id/checkbox_player2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_teamName"
+                android:text="@string/team1_player2_name" />
+
+            <CheckBox
+                android:id="@+id/checkbox_player3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_teamName"
+                android:text="@string/team1_player3_name" />
+
+            <CheckBox
+                android:id="@+id/checkbox_player4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_teamName"
+                android:text="@string/team1_player4_name" />
+
+            <CheckBox
+                android:id="@+id/checkbox_player5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_teamName"
+                android:text="@string/team1_player5_name" />
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="10dp"
+            android:background="@color/background_table"
+            android:layout_weight="3">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/field_made_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/fgm" />
+
+                <TextView
+                    android:id="@+id/field_made_val"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/fgm_val" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/field_attempt_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/fga" />
+
+                <TextView
+                    android:id="@+id/field_attempt_val"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/fga_val" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp">
+                <TextView
+                    android:id="@+id/field_percent_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/fg_percent" />
+
+                <TextView
+                    android:id="@+id/field_percent_val"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/fg_percent_val" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/ft_made_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/ftm" />
+
+                <TextView
+                    android:id="@+id/ft_made_val"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/ftm_val" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/ft_attempt_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/fta" />
+
+                <TextView
+                    android:id="@+id/ft_attempt_val"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/fta_val" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/ft_percent_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/ft_percent" />
+
+                <TextView
+                    android:id="@+id/ft_percent_val"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/ft_percent_val" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/two_pt_percent_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/two_pt_percent" />
+
+                <TextView
+                    android:id="@+id/two_pt_percent_val"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/two_pt_percent_val" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/three_pt_percent_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/three_pt_percent" />
+
+                <TextView
+                    android:id="@+id/three_pt_percent_val"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/three_pt_percent_val" />
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

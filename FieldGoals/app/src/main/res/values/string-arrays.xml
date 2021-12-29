@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="quarters_array">
+        <item>@string/qall</item>
+        <item>@string/q1</item>
+        <item>@string/q2</item>
+        <item>@string/q3</item>
+        <item>@string/q4</item>
+    </string-array>
+</resources>
